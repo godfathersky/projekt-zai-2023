@@ -22,11 +22,11 @@ Akademia im. Jakuba z Paradyża w Gorzowie Wielkopolskim
 
 ## Podział prac:
 #### Robert Zima:
-1. Projekt Logo aplikacji
-2. Projekt widoków aplikacji
-3. Projekt bazy danych
+1. Zaprojektowanie loga aplikacji
+2. Zaprojektowanie widoków aplikacji
+3. Zaprojektowanie modelu bazy danych
 4. Stworzenie bazy danych
-5. Zmapowanie bazy danych na modele w projekcie API
+5. Zmapowanie bazy danych na modele w API
 6. Stworzenie dokumentacji projektowej
 
 #### Patryk Wróblewski:
