@@ -1,4 +1,4 @@
-# Projekt - Zaawansowane Aplikacje Internetowe - 2023 essa
+# Projekt - Zaawansowane Aplikacje Internetowe - 2023
 Autorzy: Patryk Wróblewski, Robert Zima
 
 Akademia im. Jakuba z Paradyża w Gorzowie Wielkopolskim
