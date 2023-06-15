@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanbanAPI", "CanbanAPI.csproj", "{7A4BAE5D-8268-4638-90CB-C990EC3A324F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A4BAE5D-8268-4638-90CB-C990EC3A324F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4BAE5D-8268-4638-90CB-C990EC3A324F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4BAE5D-8268-4638-90CB-C990EC3A324F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4BAE5D-8268-4638-90CB-C990EC3A324F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C916099E-672A-4EE8-89B6-DAEE9ABF1709}
+	EndGlobalSection
+EndGlobal

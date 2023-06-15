@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/popUp.css">
+    <script type="module" src="/popUp.js"></script>
+    <script src="https://kit.fontawesome.com/b11e541c31.js" crossorigin="anonymous"></script>
+    <title>Canban</title>
+</head>
+<body>
+    <main class="wrapper">
+        <form class="register">
+            <div class="formHeader">
+                <p>Rejestracja</p>
+            </div>
+            <div class="inputsWrapper">
+                <div class="labels">
+                    <label for="mail">Adres email:</label>
+                    <label for="login">Nazwa użytkownika:</label>
+                    <label for="forname">Imię:</label>
+                    <label for="birthDate">Data urodzenia:</label>
+                    <label for="password">Hasło:</label>
+                    <label for="repeatPassword">Powtórz hasło:</label>
+                </div>
+                <div class="inputs">
+                    <input id="mail" name="mail" type="email">
+                    <input id="login" name="login" type="text">
+                    <input id="forname" name="forname" type="text">
+                    <input id="birthDate" name="birthDate" type="date" min="1900-01-01">
+                    <input id="password" name="password" type="password">
+                    <input id="repeatPassword" name="repeatPassword" type="password">
+                </div>
+            </div>
+            <div class="buttonWrapper">
+                <button type="submit">Zarejestruj</button>
+            </div>
+            <div class="sendToLogin">
+                <span>Jeśli posiadasz już konto, przejdż <a href="/Login//login.html">TUTAJ</a>, żeby się zalogować</span>
+            </div>
+        </form>
+        <button class="home"><i class="fa-solid fa-house"></i></button>
+    </main>
+    <script type="module" src="register.js"></script>
+</body>
+</html>

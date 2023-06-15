@@ -1,0 +1,542 @@
+:root{
+    --mainTheme: #0E479E;
+    --secondTheme: #4D96EA;
+    --headerBar: #CDCDCD;
+    --buttonColor: #0A397D;
+    --listColor: #75AAE5;
+    --itemInList: rgba(217,217,217, 0.3);
+    --elementsInList: rgba(217,217,217, 0.5);
+    --nameOfBoard: #898989;
+    --menuButtons: #999999;
+    --menuButtonsHover: #b3b3b3; 
+    --sidePanel: #1671FA;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.menu{
+    width: 100%;
+    height: 15vh;
+    background-color: var(--sidePanel);
+    display: flex;
+    align-items: center;
+}
+
+.boardInfo{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--headerBar);
+    display: flex;
+    align-items: center;
+}
+
+.taskContainer{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 75vh;
+}
+
+.hidden{
+    left: -300px;
+}
+
+.listPanel{
+    position: relative;
+    padding: 20px;
+    width: calc(100% - 90px);
+    height: calc(75vh - 40px);
+    background-color: var(--secondTheme);
+    transition: .3s linear;
+    left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.toRight{
+    left: 350px;
+    width: calc(100% - 390px);
+}
+
+.moveToLeft{
+    width: (100% - 50px);
+    transition: width .3s linear;
+}
+
+.moved{
+    width: calc(100% - 390px);
+    transition: width .3s linear;
+}
+
+.logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainMenu{
+    width: 80%;
+    margin-left: 0;
+    display: flex;
+    list-style: none;
+}
+
+.mainMenu > li{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-left: 10px;
+    background-color: var(--menuButtons);
+    height: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+.mainMenu > li:last-child{
+    position: absolute;
+    right: 5%;
+}
+
+.mainMenu > li:hover,
+.dropDown > li:hover{
+    background-color: var(--menuButtonsHover);
+}
+
+.mainMenu > li:hover .dropDownArrow{
+    transform: scale(-1) translateY(-3px);
+    transition: .3s;
+}
+
+li:hover .dropDown{
+    display: block;
+}
+
+.dropDown{
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    width: 110%;
+    background-color: var(--menuButtons);
+    display: none;
+}
+
+.dropDown > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.dropDown > li:first-child{
+    border-top: 1px solid black;
+}
+
+.dropDownArrow{
+    transform-origin: center;
+    position: relative;
+    left: 10px;
+    transition: .3s;
+}
+
+.nameOfSpace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameOfSpace > p{
+    margin: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.boardName{
+    background-color: var(--nameOfBoard);
+    min-width: 120px;
+    width: auto;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boardName > p{
+    margin: 0;
+    padding: 20px;
+}
+
+.sidePanel{
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    background-color: var(--sidePanel);
+    transition: .3s linear;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidePanelArrow{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sidePanelArrowTransform{
+    transform: scale(1);
+    transition: transform .3s linear;
+}
+
+.sidePanelArrowReverse{
+    transform: scale(-1);
+    transition: transform .3s linear;
+}
+
+.fa-solid.fa-angles-right{
+    font-size: 1.2rem;
+    color: white;
+    pointer-events: none;
+}
+
+.addList{
+    width: 10%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--itemInList);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.addList:hover{
+    background-color: rgba(217,217,217, 0.5);
+}
+
+.rubbishBin{
+    position: relative;
+    left: 10px;
+}
+
+.popUpWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 220px;
+    background-color: var(--secondTheme);
+}
+
+.popUp > input[type="text"]{
+    width: calc(80% - 15px);
+    padding-left: 15px;
+    height: 20%;
+}
+
+.buttonWrapper{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+}
+
+.create,
+.cancel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 35px;
+    height:  25px;
+    margin: 0;
+    padding: 0;
+}
+
+.cancelIcon,
+.acceptIcon{
+    font-size: 15px;
+}
+
+.cancel{
+    margin-left: 30px;
+}
+
+.listWrapper{
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    background-color: var(--itemInList);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+}
+
+.listHeader{
+    position: relative;
+    width: 90%;
+    min-height: 3vh;
+    display: flex;;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.listHeader > p{
+    margin: 0;
+    width: 85%;
+    word-wrap: break-word;
+}
+
+.delete{
+    font-size: 1rem;
+    color: white;
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+.delete:hover{
+    color: rgb(216, 216, 216);
+}
+
+.addTaskWrapper{
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.addTask{
+    height: 30px;
+    width: auto;
+    background-color: var(--elementsInList);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.addTask:hover{
+    background-color: rgba(217,217,217, 0.3);
+}
+
+.plus{
+    margin-left: 5px;
+}
+
+.task{
+    position: relative;
+    min-height: 30px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    text-overflow: clip;
+    flex-wrap: wrap;
+    background-color: var(--elementsInList);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.task > p{
+    margin: 0;
+    width: 80%;
+    margin-left: 10px;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+.members,
+.settings{
+    width: 80%;
+    height: 70px;
+    background-color: var(--buttonColor);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.members:active,
+.settings:active{
+    transform: scale(.95);
+    transition: .3s;
+}
+
+.members:hover,
+.settings:hover{
+    background-color: #0c4594;  
+}
+
+.boards{
+    width: 80%;
+    height: auto;
+}
+
+.boards > .head{
+    margin-top: 20px;
+    width: 100%;
+    height: 70px;
+    background-color: var(--buttonColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+}
+
+.names{
+    display: flex;
+    justify-content: center;
+}
+
+.userBoards{
+    list-style: none;
+    padding: 0;
+}
+
+.userBoards > li{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.removeTask{
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.removeTask > i{
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slideIn{
+    animation: slideIn .3s linear;
+}
+
+.slideOut{
+    animation: slideOut .3s linear;
+}
+
+.moveRight{
+    animation: moveRight .3s linear;
+}
+
+.moveLeft{
+    animation: moveLeft .3s linear;
+}
+
+@keyframes moveLeft{
+    0%{
+        left: 350px;
+    }
+    100%{
+        left: 50px;
+    }
+}
+
+@keyframes moveRight{
+    0%{
+        left: 50px;
+    }
+    100%{
+        left: 350px;
+    }
+}
+
+@keyframes slideIn{
+    0%{
+        left: -300px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes slideOut{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: -300px;
+    }
+}

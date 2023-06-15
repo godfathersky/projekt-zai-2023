@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/popUp.css">
+    <script src="https://kit.fontawesome.com/b11e541c31.js" crossorigin="anonymous"></script>
+    <script src="loggedUser.js"></script>
+    <script type="module" src="/popUp.js"></script>
+    <title>Canban</title>
+</head>
+<body>
+    <main class="wrapper">
+        <nav class="menu">
+            <div class="logo">
+                <img src="/media/logoTypeTickTask.png" alt="logotype" height="110">
+            </div>
+            <ul class="mainMenu">
+                <li class="workSpaces">
+                    Przestrzenie robocze
+                    <i class="fa-sharp fa-solid fa-caret-down dropDownArrow"></i>
+                    <ol class="dropDown singleWorkSpace">
+                        
+                    </ol>
+                </li>
+                <li>
+                    Ostatnie
+                    <i class="fa-sharp fa-solid fa-caret-down dropDownArrow"></i>
+                    <ol class="dropDown">
+                    </ol>
+                </li>
+                <li>
+                    Ulubione
+                    <i class="fa-sharp fa-solid fa-caret-down dropDownArrow"></i>
+                    <ol class="dropDown">
+                    </ol>
+                </li>
+                <li>Utwórz</li>
+                <li class="logout">Wyloguj</li>
+            </ul>
+        </nav>
+        <section class="boardInfo">
+            <div class="nameOfSpace">
+                <p></p>
+            </div>
+            <div class="boardName">
+                <p></p>
+            </div>
+        </section>
+        <section class="taskContainer">
+            <div class="sidePanel hidden">
+                <button class="members">
+                    <p>Członkowie</p>
+                </button>
+                <button class="settings">
+                    <p>Ustawienia</p>
+                </button>
+                <div class="boards">
+                    <div class="head">
+                        <p>Twoje tablice</p>
+                    </div>
+                    <div class="names">
+                        <ul class="userBoards">
+                            
+                        </ul> 
+                    </div>
+                </div>
+                <button class="sidePanelArrow sidePanelArrowTransform">
+                    <i class="fa-solid fa-angles-right"></i>
+                </button>
+            </div>
+            <div class="listPanel">
+                <button class="addList">Dodaj listę
+                    <i class="fa-solid fa-plus rubbishBin"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="fillUserPage.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

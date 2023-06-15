@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/popUp.css">
+    <script type="module" src="/popUp.js"></script>
+    <script src="https://kit.fontawesome.com/b11e541c31.js" crossorigin="anonymous"></script>
+    <title>Canban</title>
+</head>
+<body>
+    <main class="wrapper">
+        <form>
+            <div class="header">
+                <p>Logowanie</p>
+            </div>
+            <div class="inputsWrapper">
+                <div class="labels">
+                    <label for="login">Nazwa użytkownika:</label>
+                    <label for="password">Hasło:</label>
+                </div>
+                <div class="inputs">
+                    <input id="login" name="login" type="text">
+                    <input id="password" name="password" type="password">
+                </div>
+            </div>
+            <div class="sendToRegister">
+                <span>Jeśli nie masz jeszcze konta, kliknij <a href="/Register/register.html">TUTAJ</a></span>
+            </div>
+            <div class="buttonWrapper">
+                <button type="submit">Zaloguj</button>
+            </div>
+        </form>
+        <button class="home"><i class="fa-solid fa-house"></i></button>
+    </main>
+    <script type="module" src="login.js"></script>
+</body>
+</html>

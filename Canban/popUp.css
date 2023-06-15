@@ -1,0 +1,53 @@
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 150px;
+    top: 100px;
+    min-width: 300px;
+    padding: 10px;
+    height: 80px;
+    background-color: black;
+}
+
+.info > p{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.popIn{
+    animation: popIn .3s linear;
+}
+
+.popOut{
+    animation: popOut .3s linear;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+.ok{
+    border: 1px solid greenyellow;
+}
+
+
+@keyframes popOut{
+    0%{
+        right: 150px;
+    }
+    100%{
+        right: -210px
+    }
+}
+
+@keyframes popIn{
+    0%{
+        right: -210px;
+    }
+    100%{
+        right: 150px;
+    }
+}
